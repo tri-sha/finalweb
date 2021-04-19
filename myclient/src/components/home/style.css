@@ -476,3 +476,7 @@ form a{
 .exploreimg{
 	background-color:#fa9a9e ;
 }
+.error{
+	font-size: 12px;
+	color:red;
+}

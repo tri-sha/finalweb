@@ -20,3 +20,7 @@ export const postProduct = async(req,res)=>{
     await product.save();
 
 }
+
+export const saveToCart = async(req,res)=>{
+    
+}

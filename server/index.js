@@ -2,8 +2,9 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import postRouter from './routers/posts.js';
 import productRouter from './routers/product.js';
+import userRouter from './routers/user.js';
+
 const app = express();
 
 //const dotenv = require("dotenv");
@@ -12,10 +13,10 @@ const app = express();
 app.use(bodyParser.json({limit:"30mb" , extended : true}));
 app.use(bodyParser.urlencoded({limit:"30mb" , extended : true}));
 app.use(cors());
-//app.use(express.json());
+app.use(express.json());
 
 
-app.use('/auth',postRouter);
+app.use('/user',userRouter);
 app.use('/product',productRouter);
 
 const Connection_URL = 'mongodb://localhost:27017/webdb';
